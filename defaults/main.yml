@@ -1,6 +1,6 @@
 ---
 
-ffmpeg_base_url: "https://johnvansickle.com/ffmpeg/"
+ffmpeg_base_url: "https://johnvansickle.com/ffmpeg"
 
 # To obtain the latest version available use: "release"
 # To obtain a specific version use the version number: "4.0.1"
