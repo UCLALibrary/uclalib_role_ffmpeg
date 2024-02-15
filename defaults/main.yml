@@ -1,14 +1,16 @@
 ---
 
-ffmpeg_base_url: "https://johnvansickle.com/ffmpeg"
+# This is the URL to the UCLA Library's package repository.
+# ffmpeg packages come from `https://johnvansickle.com/ffmpeg`
+ffmpeg_base_url: "http://pkgs.library.ucla.edu/ffmpeg"
 
-# To obtain the latest version available use: "release"
-# To obtain a specific version use the version number: "4.0.1"
-ffmpeg_version: "release"
+# Version of ffmpeg to download/install (e.g. `4.0.1`)
+# This version must already exist in the UCLA Library's package repository
+ffmpeg_version: "4.1.4"
 
 ffmpeg_filename: "ffmpeg-{{ ffmpeg_version }}-amd64-static.tar.xz"
 
-ffmpeg_download_url: "{{ ffmpeg_base_url }}/releases/{{ ffmpeg_filename }}"
+ffmpeg_download_url: "{{ ffmpeg_base_url }}/{{ ffmpeg_filename }}"
 
 ffmpeg_install_dir: /opt
 
