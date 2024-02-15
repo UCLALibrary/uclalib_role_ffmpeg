@@ -11,12 +11,9 @@ None.
 Role Variables
 --------------
 
-* `ffmpeg_base_url` - defines the home page/base url where ffmpeg is made available - https://johnvansickle.com/ffmpeg/
+* `ffmpeg_base_url` - defines the home page/base url where ffmpeg is made available
 
-* `ffmpeg_version` - defines the version of ffmpeg to obtain
-  - for the latest version available use: "`release`"
-  - for a specific version use the version number: "`4.0.1`"
-
+* `ffmpeg_version` - defines the version of ffmpeg to obtain (e.g. `4.0.1`)
 
 * `ffmpeg_install_dir` - defines the directory to install ffmpeg
 
@@ -27,15 +24,16 @@ FFMpeg Download URL Note
 
 The default value for the `ffmpeg_download_url` variable is:
 
-`https://johnvansickle.com/ffmpeg/releases/ffmpeg-{{ ffmpeg_version }}-amd64-static.tar.xz`
-
-If you are affiliated with UCLA, you have the option of overriding this default url value with:
-
 `http://pkgs.library.ucla.edu/ffmpeg/ffmpeg-{{ ffmpeg_version }}-amd64-static.tar.xz`
+
+You can override this variable to obtain ffmpeg from the source by using:
+
+`https://johnvansickle.com/ffmpeg/releases/ffmpeg-{{ ffmpeg_version }}-amd64-static.tar.xz`
 
 Versions of FFMpeg available via the UCLA URL are:
 
 * `4.1`
+* `4.1.4`
 
 Dependencies
 ------------
@@ -47,4 +45,4 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: uclalib_role_ffmpeg, ffmpeg_version: '4.0.1' }
+         - { role: uclalib_role_ffmpeg, ffmpeg_version: '4.1.4' }
